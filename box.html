@@ -1,0 +1,72 @@
+<!-- Review Score Button -->
+<button id="review-score-btn">Review Score</button>
+
+<!-- Dropdown for Review Score -->
+<div id="review-score-dropdown" class="review-dropdown-content">
+    <label class="review-label"><input type="checkbox" class="review-checkbox"> Any curise line</label>
+    <label class="review-label"><input type="checkbox" class="review-checkbox"> Carvival curise</label>
+    <label class="review-label"><input type="checkbox" class="review-checkbox"> Celebrity curise</label>
+    <label class="review-label"><input type="checkbox" class="review-checkbox"> Disney curise line</label>
+    <label class="review-label"><input type="checkbox" class="review-checkbox"> MSC courise</label>
+</div>
+<style>
+#review-score-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+    margin: 10px;
+}
+
+/* Dropdown Content Styling */
+.review-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px 20px;
+    border-radius: 8px;
+    width: 200px;
+    font-family: Arial, sans-serif;
+    z-index: 1;
+}
+
+/* Styling for Each Rating Label */
+.review-label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+/* Checkbox Styling */
+.review-checkbox {
+    margin-right: 8px;
+}
+
+/* Star Rating Styling */
+.review-stars {
+    color: #f4b400; /* Gold color for stars */
+    font-size: 16px;
+    margin-right: 8px;
+}
+</style>
+<script>
+    // Toggle the dropdown display when the button is clicked
+document.getElementById("review-score-btn").onclick = function () {
+    var dropdown = document.getElementById("review-score-dropdown");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+};
+
+// Close the dropdown when clicking outside of it
+window.onclick = function(event) {
+    var dropdown = document.getElementById("review-score-dropdown");
+    if (event.target !== dropdown && event.target !== document.getElementById("review-score-btn")) {
+        dropdown.style.display = "none";
+    }
+};
+
+</script>
