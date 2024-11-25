@@ -1,0 +1,160 @@
+
+/* General Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+   
+    background-color: rgba(13, 11, 11, 0.5); /* Semi-transparent background */
+}
+
+/* Modal Content Box */
+.modal-content {
+ 
+  background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute; /* Fix position within the modal container */
+    top: 30%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset for true centering */
+    font-family: Arial, sans-serif;
+    overflow-y: auto;
+    max-height: 80vh; 
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #aaa;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* Header and Welcome Text */
+.modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.modal-content p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.modal-content label {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+    display: block;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+/* Disable Body Scroll When Modal is Active */
+body.modal-open {
+ overflow: hidden;
+}
+
+
+/* Checkbox and Label */
+.modal-content input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.modal-content label[for="rememberMe"] {
+    font-size: 14px;
+    color: #666;
+}
+.modal-content input[type="text"]:hover{
+  border: solid #007bff;
+
+
+
+
+
+
+}
+
+.modal-content input[type="password"]:hover{
+  border: solid #007bff;
+
+
+
+}
+
+.form-group {
+    margin-top: 5px;
+display: flex;
+flex-direction: column;
+margin-bottom: 15px;
+}
+
+.form-group label {
+margin-left: 20px;
+margin-bottom: 5px;
+
+}
+
+
+
+/* Login Button */
+.modal-content button[type="submit"] {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.modal-content button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Social Media Section */
+.social-icons {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    margin: 0 8px;
+    font-size: 18px;
+    color: #555;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+
+
