@@ -1,5 +1,3 @@
-<!-- Navbar -->
-<!-- Template CSS Files -->
 <link rel="stylesheet" href="https://techydevs.com/demos/themes/html/trizen-demo/html/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://techydevs.com/demos/themes/html/trizen-demo/html/css/select2.min.css">
 <link rel="stylesheet" href="https://techydevs.com/demos/themes/html/trizen-demo/html/css/line-awesome.css">
@@ -107,14 +105,7 @@
         
       
         <h1 >Amazing Adventure Waiting For You</h1>
-    <style>
-
-.content-heading {
-    position: relative;
-    top: -50px; /* Move the heading up; adjust this value as needed */
-    margin-bottom: 20px; /* Space between heading and form box */
-}
-    </style>
+   
 
         <!-- Form Container -->
         <div class="form-container"  >
@@ -1358,70 +1349,6 @@ document.addEventListener('click', (e) => {
             <!-- Multi-Destination Form Section -->
            
         
-            <script>
-                // Function to toggle the trip form sections based on radio button selection
-                function toggleTripType() {
-                    const roundTripForm = document.getElementById('round-trip-form');
-                    const oneWayForm = document.getElementById('one-way-form');
-                    const multiDestinationForm = document.getElementById('multi-destination-form');
-                
-                    // Hide all forms
-                    roundTripForm.style.display = 'none';
-                    oneWayForm.style.display = 'none';
-                    multiDestinationForm.style.display = 'none';
-                
-                    // Show the selected form based on the radio button clicked
-                    if (document.querySelector('input[name="trip"]:checked').value === 'round-trip') {
-                        roundTripForm.style.display = 'block';
-                    } else if (document.querySelector('input[name="trip"]:checked').value === 'one-way') {
-                        oneWayForm.style.display = 'block';
-                    } else if (document.querySelector('input[name="trip"]:checked').value === 'multi-destination') {
-                        multiDestinationForm.style.display = 'block';
-                    }
-                }
-                
-                // Function to add additional flights for Multi-Destination
-                document.getElementById('add-flight-btn').addEventListener('click', function() {
-                    const additionalFlights = document.getElementById('additional-flights');
-                
-                    const newFlight = document.createElement('div');
-                    newFlight.className = 'search-box';
-                
-                    const departureLabel = document.createElement('label');
-                    departureLabel.textContent = 'Departing from:';
-                    const departureInput = document.createElement('input');
-                    departureInput.type = 'text';
-                    departureInput.style.cssText = 'width: 240px; height: 50px; border: 2px solid #e5e5e5; border-radius: 5px;';
-                    departureInput.placeholder = 'City or airport';
-                
-                    const destinationLabel = document.createElement('label');
-                    destinationLabel.textContent = 'Going to:';
-                    const destinationInput = document.createElement('input');
-                    destinationInput.type = 'text';
-                    destinationInput.style.cssText = 'width: 240px; height: 52px; margin-left: 4px; border: 2px solid #e5e5e5; border-radius: 5px;';
-                    destinationInput.placeholder = 'City or airport';
-                
-                
-                    // Cross Button
-                    const crossBtn = document.createElement('button');
-                    crossBtn.textContent = 'X';
-                    crossBtn.style.cssText = 'background-color: red; color: white; border: none; border-radius: 50%; width: 30px; height: 30px; margin-left: 10px; cursor: pointer;';
-                    crossBtn.onclick = function() {
-                        additionalFlights.removeChild(newFlight);
-                    };
-                
-                    newFlight.appendChild(departureLabel);
-                    newFlight.appendChild(departureInput);
-                    newFlight.appendChild(destinationLabel);
-                    newFlight.appendChild(destinationInput);
-                    newFlight.appendChild(crossBtn);
-                
-                    additionalFlights.appendChild(newFlight);
-                });
-                
-                
-                </script>
-                
                 
                 
                         <!-- Car Form -->
@@ -2058,6 +1985,14 @@ border-radius: 8px;
     display: none;
     z-index: 10;
   }
+
+
+.content-heading {
+    position: relative;
+    top: -50px; /* Move the heading up; adjust this value as needed */
+    margin-bottom: 20px; /* Space between heading and form box */
+}
+   
   
   .suggestions-box .suggestion-item {
     padding: 10px;
@@ -5245,6 +5180,11 @@ return word.charAt(0).toUpperCase() + word.slice(1);
     padding: 10px 0;
 }
 
+
+                
+
+
+
 .tab {
     flex: 1;
     padding: 10px;
@@ -5469,6 +5409,69 @@ return word.charAt(0).toUpperCase() + word.slice(1);
   
   
   
+<script>
+  // Function to toggle the trip form sections based on radio button selection
+  function toggleTripType() {
+      const roundTripForm = document.getElementById('round-trip-form');
+      const oneWayForm = document.getElementById('one-way-form');
+      const multiDestinationForm = document.getElementById('multi-destination-form');
+  
+      // Hide all forms
+      roundTripForm.style.display = 'none';
+      oneWayForm.style.display = 'none';
+      multiDestinationForm.style.display = 'none';
+  
+      // Show the selected form based on the radio button clicked
+      if (document.querySelector('input[name="trip"]:checked').value === 'round-trip') {
+          roundTripForm.style.display = 'block';
+      } else if (document.querySelector('input[name="trip"]:checked').value === 'one-way') {
+          oneWayForm.style.display = 'block';
+      } else if (document.querySelector('input[name="trip"]:checked').value === 'multi-destination') {
+          multiDestinationForm.style.display = 'block';
+      }
+  }
+  
+  // Function to add additional flights for Multi-Destination
+  document.getElementById('add-flight-btn').addEventListener('click', function() {
+      const additionalFlights = document.getElementById('additional-flights');
+  
+      const newFlight = document.createElement('div');
+      newFlight.className = 'search-box';
+  
+      const departureLabel = document.createElement('label');
+      departureLabel.textContent = 'Departing from:';
+      const departureInput = document.createElement('input');
+      departureInput.type = 'text';
+      departureInput.style.cssText = 'width: 240px; height: 50px; border: 2px solid #e5e5e5; border-radius: 5px;';
+      departureInput.placeholder = 'City or airport';
+  
+      const destinationLabel = document.createElement('label');
+      destinationLabel.textContent = 'Going to:';
+      const destinationInput = document.createElement('input');
+      destinationInput.type = 'text';
+      destinationInput.style.cssText = 'width: 240px; height: 52px; margin-left: 4px; border: 2px solid #e5e5e5; border-radius: 5px;';
+      destinationInput.placeholder = 'City or airport';
+  
+  
+      // Cross Button
+      const crossBtn = document.createElement('button');
+      crossBtn.textContent = 'X';
+      crossBtn.style.cssText = 'background-color: red; color: white; border: none; border-radius: 50%; width: 30px; height: 30px; margin-left: 10px; cursor: pointer;';
+      crossBtn.onclick = function() {
+          additionalFlights.removeChild(newFlight);
+      };
+  
+      newFlight.appendChild(departureLabel);
+      newFlight.appendChild(departureInput);
+      newFlight.appendChild(destinationLabel);
+      newFlight.appendChild(destinationInput);
+      newFlight.appendChild(crossBtn);
+  
+      additionalFlights.appendChild(newFlight);
+  });
+  
+  
+  </script>
   
   
   
